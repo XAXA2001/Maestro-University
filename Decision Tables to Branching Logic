@@ -1,0 +1,12 @@
+usage = 16
+
+if usage < 2:
+    plan = "Light"
+elif 2 <= usage < 10:
+    plan = "Standard"
+elif 10 <= usage < 50:
+    plan = "Heavy"
+else:
+    plan = "Unlimited"
+
+print(plan)
