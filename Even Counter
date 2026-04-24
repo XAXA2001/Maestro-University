@@ -1,0 +1,9 @@
+def count_even(start, end):
+    even_count = 0
+    for count in range(start, end + 1):
+        if count % 2 == 0:
+            even_count = even_count + 1
+    return even_count
+
+result = count_even(1, 10)
+print(result)
