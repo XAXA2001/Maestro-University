@@ -1,0 +1,13 @@
+def guess_until(secret):
+    guesses = 1
+    guess = int(input("Enter a number: "))
+    while guess != secret:
+        guess = int(input("Enter a number: "))
+        if guess == secret:
+            break
+        else:
+            guesses = guesses + 1
+    return guesses
+
+attempts = guess_until(7)
+print(attempts)
