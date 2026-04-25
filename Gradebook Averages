@@ -1,0 +1,18 @@
+def average_grade(times):
+    total = 0
+    for grade in range(times):
+        score = int(input("Enter score (0-100): "))
+        total = total + score
+    avg = total / times
+    if avg >= 90:
+        return "A"
+    elif avg >= 80 and avg < 90:
+        return "B"
+    elif avg >= 70 and avg < 80:
+        return "C"
+    else:
+        return "F"
+
+
+result = average_grade(3)
+print(result)
