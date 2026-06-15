@@ -1,0 +1,6 @@
+base = 10
+bonus = 2.5
+
+total = base + bonus
+
+print(total)
