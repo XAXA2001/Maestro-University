@@ -1,0 +1,6 @@
+SyntaxError → code not written in valid Python form
+TypeError → code is valid, but at runtime the types don’t match
+
+SyntaxError (code not valid Python form)
+TypeError (wrong types, like string + int)
+NameError (variable name not defined)
