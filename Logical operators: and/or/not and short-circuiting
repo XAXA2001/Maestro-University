@@ -1,0 +1,21 @@
+armor_broken = False
+health = 45
+shield_active = False
+
+if (armor_broken or health < 25) and not shield_active:
+    print("DANGER: You are exposed!")
+
+
+Let’s check the logic against the rule:
+
+
+
+(armor is broken OR health is below 25) AND shield is not active
+
+
+
+armor_broken → False
+health < 25 → 45 < 25 is False
+(armor_broken or health < 25) → False or False → False
+not shield_active → not False → True
+False and True → False → no warning printed (which is correct for these values).
