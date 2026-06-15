@@ -1,0 +1,23 @@
+def spend_coins(current_coins):
+    coins = current_coins - 2
+    return coins
+
+coins = 10
+coins = spend_coins(coins)
+print(coins)
+
+
+You:
+
+
+Used a parameter: current_coins
+Did the math inside the function: current_coins - 2
+Returned the result and stored it back into the global coins
+Printed 8, which matches 10 - 2
+
+This is a clean example of:
+
+
+local variable (current_coins, and even coins inside the function)
+global variable (coins outside)
+passing data in and getting a result back
