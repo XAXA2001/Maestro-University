@@ -1,0 +1,18 @@
+def double_coins(coins):
+    print(coins)
+    new_amount = coins * 2
+    print(new_amount)
+    return new_amount
+
+result = double_coins(10)
+print(result)
+
+
+def convert_minutes_to_seconds(minutes):
+    print(minutes)
+    seconds = minutes * 60
+    print(seconds)
+    return seconds
+
+total_seconds = convert_minutes_to_seconds(7)
+print(total_seconds)
