@@ -1,0 +1,4 @@
+player_name = "Lord Khalid"
+favorite_weapon = "Scythe of the Dead"
+
+print(player_name + " wields " + favorite_weapon)
