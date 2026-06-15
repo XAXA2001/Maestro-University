@@ -1,0 +1,18 @@
+def triple_coins():
+    return 15
+
+triple_coins()
+coins = triple_coins() * 3
+print(coins)
+
+
+What’s happening:
+
+
+triple_coins returns 15 ✅
+coins = triple_coins() * 3 calls the function, gets 15, multiplies by 3, so coins becomes 45
+print(coins) shows 45 (matches the output you got)
+
+That means you’re using the returned value in an expression — that’s exactly the idea 💪
+
+The lonely triple_coins() line above is just a call whose result you ignore, but it doesn’t hurt anything.
