@@ -1,0 +1,11 @@
+health = 100
+
+if health > 0:
+    print("Player is Alive")
+else:
+    print("Player is Dead")
+
+You created health
+Used a comparison (health > 0)
+Used if / else
+Indented correctly so Python knows which print belongs where
