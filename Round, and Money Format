@@ -1,0 +1,12 @@
+price = 19.999
+print(round(price, 2))
+
+price = 4.5
+print(f"Price: ${price:.2f}")
+
+total = 10.129
+print(round(total, 2))
+print(f"{total:.2f}")
+Both lines print 10.13, but only one of them actually changes the value it uses.
+round(total, 2) → creates a new rounded number (like 10.13). If you did total = round(total, 2), then total itself would change.
+f"{total:.2f}" → keeps total the same inside Python, but formats it to look like 10.13 when printed
