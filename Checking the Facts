@@ -1,0 +1,12 @@
+age = 18
+print(type(age))
+
+name = "Xavien"
+print(type(name))
+
+score = 120
+print("Score: " + str(score))
+
+age = "21"
+age_number = int(age)
+print(type(age_number))
