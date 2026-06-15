@@ -1,0 +1,5 @@
+potion_text = input("How many potions do you want? ")
+potions = int(potion_text)
+
+gold_per_potion = potions * 5
+print(f"That will cost {gold_per_potion} gold")
