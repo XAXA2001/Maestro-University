@@ -1,0 +1,1 @@
+print("Level Up!!! " * 3, "Score:", 30)
