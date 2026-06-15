@@ -1,0 +1,11 @@
+a = True
+b = False
+
+same_value = (a == b)
+same_object = (a is b)
+
+print("same_value:", same_value)
+print("same_object:", same_object)
+
+a == b → True == False → values are different → False
+a is b → they’re not the same object either → False
