@@ -1,0 +1,53 @@
+#Calculator handling all real numbers(negatives included)
+
+#Adding funcition
+def add(x, y):
+    """Returns the sum of x and y"""
+    return x + y
+
+#Subtraction function
+def subtract(x, y):
+    """Returns the difference of x and y"""
+    return x - y
+
+#Multiplication function
+def multiply(x, y):
+    """Returns the multiple of x and y"""
+    return x * y
+
+#Division function
+def divide(x, y):
+    """Returns the quotient of x and y"""
+    if y == 0:
+        return "Invalid input"
+    return x / y
+
+def calculate(x, op, y):
+    """Calculate x and y based on user operation"""
+    if op == "+":
+        return add(x, y)
+    elif op == "-":
+        return subtract(x, y)
+    elif op == "*":
+        return multiply(x, y)
+    elif op == "/":
+        return divide(x, y)
+    else:
+        return "Invalid input"
+
+def main():
+    """User input used for calculation"""
+    user_calc = (input("Enter calculation (i.e., 4 * 4)"))
+
+    try:
+        parts = user_calc.split()
+        x = float(parts[0])
+        op = parts[1]
+        y = float(parts[2])
+        result = calculate(x, op, y)
+    except Exception:
+        result = "Invalid input"
+
+    print(result)
+
+main()
