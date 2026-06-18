@@ -1,0 +1,106 @@
+users = {}
+music = [
+    {"title": "XX-Rated", "artist": "XAXA", "price": 9.99},
+    {"title": "X-Rated", "artist": "XAXA", "price": 9.99}
+]
+cart = {}
+
+def sign_up(users):
+    """Prompts user sign up"""
+    username = input("Create a username: ")
+    password = input("Create a password: ")
+    users[username] = password
+
+def login(users):
+    """Prompts user login"""
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    if username in users and users[username] == password:
+        print("Login successful!")
+    else:
+        print("Login failed.")
+
+def view_music(music):
+    """Shows users available music"""
+    for mixtape in music:
+        print(f"{mixtape["title"]} by {mixtape["artist"]} - ${mixtape["price"]}")
+
+def add_to_cart(cart, username, mixtape_title):
+    """Adds choosen mixtape to the user's cart"""
+    if username not in cart:
+        cart[username] = []
+    if mixtape_title not in cart[username]:
+        cart[username].append(mixtape_title)
+
+def remove_from_cart(cart, username, mixtape_title):
+    if username in cart and mixtape_title in cart[username]:
+        cart[username].remove(mixtape_title)
+        print(f'"{mixtape_title}" removed from your cart.')
+    else:
+        print("Item not in cart.")
+
+def show_cart(cart, username, music):
+    """Shows the user's cart"""
+    total = 0
+    if username not in cart or not cart[username]:
+        print("Your cart is empty.")
+        return
+    for mixtape_title in cart[username]:
+        for m in music:
+            if m["title"] == mixtape_title:
+                print(f"{m["title"]}, {m["artist"]}, ${m["price"]}")
+                total += m["price"]
+    print(f"Total: ${total}")
+
+def choose_payment():
+    """Prompts user to choose a payment method"""
+    payment_option = input("Choose payment option (Cash App or PayPal)")
+    return (payment_option)
+
+def process_transaction(cart, username, payment_option):
+    """Processes user's payment"""
+    print(f"Processing payment with {payment_option}...")
+    print("Transaction complete! Thank you for your purchase.")
+    cart[username] = []
+
+def main():
+    """Prompts user sign up or login, Directs to store, and Processes Transaction"""
+    print("Welcome to the Free World Music Vault!")
+    choice = input("Enter 1 to sign up or 2 to login: ")
+    if choice == "1":
+        sign_up(users)
+        username = input("Please enter your new username to continue: ")
+    elif choice == "2":
+        username = input("Enter your username to continue: ")
+        login(users)
+    else:
+        print("Invalid selection.")
+        return
+
+    print(f"Welcome, {username}! Here are the available mixtapes:")
+    view_music(music)
+
+    while True:
+        print("Menu: (a) add to cart, (r) remove from cart, (v) view cart, (c) checkout, (q) quit")
+        next_action = input("Choose an action: ")
+        if next_action == "a":
+            mixtape_title = input("Enter the title of the mixtape to add: ")
+            add_to_cart(cart, username, mixtape_title)
+            print("Added to cart!")
+        elif next_action == "r":
+            mixtape_title = input("Enter the title of the mixtape to remove: ")
+            remove_from_cart(cart, username, mixtape_title)
+        elif next_action == "v":
+            show_cart(cart, username, music)
+        elif next_action == "c":
+            show_cart(cart, username, music)
+            payment_option = choose_payment()
+            process_transaction(cart, username, payment_option)
+            break
+        elif next_action == "q":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option, please try again.")
+
+main()
