@@ -1,0 +1,5 @@
+message = "just exploring the map"
+if "help" not in message:
+    print("No help keyword found.")
+else:
+    print("Help detected.")
