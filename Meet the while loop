@@ -1,0 +1,7 @@
+import random
+
+roll = 0
+
+while roll != 6:
+    print(roll)
+    roll = random.randint(1,6)
