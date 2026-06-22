@@ -1,0 +1,19 @@
+usage = 16
+
+if usage < 2:
+    plan = "Light"
+elif 2 <= usage < 10:
+    plan = "Standard"
+elif 10 <= usage < 50:
+    plan = "Heavy"
+else:
+    plan = "Unlimited"
+
+print(plan)
+
+
+Row	Condition	Code condition	Plan
+1	usage < 2	usage < 2	"Light"
+2	2 ≤ usage < 10	2 <= usage < 10	"Standard"
+3	10 ≤ usage < 50	10 <= usage < 50	"Heavy"
+4	usage ≥ 50	else (everything ≥50)	"Unlimited"
