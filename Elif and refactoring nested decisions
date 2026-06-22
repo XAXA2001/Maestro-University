@@ -1,0 +1,11 @@
+monster = "ogre"
+health = 15
+
+if monster == "dragon":
+    print("Use ice magic!")
+elif monster == "ogre" and health < 20:
+    print("The ogre is weak, finish it!")
+elif monster == "ogre" and health >= 20:
+    print("Keep your distance from the ogre!")
+else:
+    print("Unknown monster, be careful.")
