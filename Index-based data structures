@@ -1,0 +1,4 @@
+quests = ["Find sword", "Talk to guard", "Open gate", "Defeat boss"]
+
+for x in range(len(quests)):
+    print("Index:" ,x, quests[x])
