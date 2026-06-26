@@ -1,0 +1,33 @@
+scores = [500, 720, 660, 810, 900]
+
+print(len(scores) // 2)
+
+scores[0] = 550
+scores[2] = 700
+scores[-1] = 950
+
+print(scores)
+
+
+
+scores = [500, 720, 660, 810, 900]
+
+print("before:", id(scores), len(scores))
+
+scores[0] = 575
+scores[2] = 750
+scores[-1] = 1000
+
+print("after:", id(scores), len(scores))
+print(scores)
+
+
+
+scores = [100, 200, 300]
+
+idx = 1
+
+if 0 <= idx < len(scores):
+    scores[idx] = 999
+
+print(scores)
