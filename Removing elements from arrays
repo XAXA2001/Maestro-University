@@ -1,0 +1,15 @@
+items = ["axe", "shield", "potion", "boots"]
+#        index:   0        1         2        3
+removed = items.pop(2)
+
+
+
+items = ["axe", "shield", "potion", "boots"]
+items.remove("shield")
+
+
+
+items = ["axe", "shield", "potion", "shield", "boots"]
+
+items.pop(0)
+items.remove("shield")
