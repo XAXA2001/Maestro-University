@@ -11,6 +11,7 @@ print(result)
 
 
 
+
 def edit_playlist(songs, fix_index, remove_index):
     songs[fix_index] = songs [fix_index] + " (remix)"
     removed = songs.pop(remove_index)
