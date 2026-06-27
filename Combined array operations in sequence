@@ -1,0 +1,23 @@
+def edit_items(items):
+    items[2] = "whole wheat bread"
+    removed = items.pop(3)
+    length = len(items)
+    return removed, length
+
+items = ["milk", "eggs", "bread", "juice"]
+result = edit_items(items)
+print(items)
+print(result)
+
+
+
+def edit_playlist(songs, fix_index, remove_index):
+    songs[fix_index] = songs [fix_index] + " (remix)"
+    removed = songs.pop(remove_index)
+    length = len(songs)
+    return removed, length
+
+songs = ["Halo", "Stronger", "Numb", "Lose Yourself"]
+removed, size = edit_playlist(songs, 1, 3)
+print(songs)
+print(removed, size)
