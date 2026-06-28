@@ -1,0 +1,21 @@
+def update_quests(quests):
+    quests.append("Defeat Dragon") # Step 1: append "Defeat dragon"
+    quests[1] = "Talk to king" # Step 2: change item at index 1 to "Talk to king"
+    quests.pop(2) # Step 3: remove item at index 2
+    return quests
+
+quests = ["Find sword", "Talk to elder", "Explore cave"]
+updated = update_quests(quests)
+print(updated)
+
+
+
+def fix_scores(scores):
+    scores[0] = 100
+    scores.pop()
+    scores.append(90)
+    return scores
+
+scores = [50, 70, 80, 60]
+fixed = fix_scores(scores)
+print(fixed)
