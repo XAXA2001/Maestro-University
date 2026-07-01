@@ -1,0 +1,59 @@
+scores = []
+
+if len(scores) > 0:
+    print(scores[0])
+else:
+    print("No scores yet")
+
+
+
+scores = [150]
+
+if len(scores) > 0:
+    print("Top score:", scores[0])
+else:
+    print("No scores yet")
+
+
+
+scores = [200, 180]
+
+if len(scores) >= 3:
+    print("1st:", scores[0])
+    print("2nd:", scores[1])
+    print("3rd:", scores[2])
+else:
+    print("Not enough scores to show top 3")
+
+
+
+scores = [200, 220, 190]
+
+if len(scores) >= 3:
+    print("1st:", scores[0])
+    print("2nd:", scores[1])
+    print("3rd:", scores[2])
+else:
+    print("Not enough scores to show top 3")
+
+
+
+nums = [150, 300]
+
+if len(nums) >= 3:
+    removed = nums.pop(2)
+    print("Removed:", removed)
+    print("Now nums is:", nums)
+else:
+    print("List too short, not removing anything")
+
+
+
+nums = [5, 10, 15, 20]
+
+if len(nums) >= 3:
+    removed = nums.pop(2)
+    print("Removed:", removed)
+    print("Now nums is:", nums)
+else:
+    print("List too short, not removing anything")
