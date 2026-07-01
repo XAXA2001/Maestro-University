@@ -1,0 +1,39 @@
+tasks = [
+    {"Description": "Fold laundry", "Status": "Pending", "Priority": 1}
+    ]
+
+def add_task(description, status, priority):
+    new_task = {"Description": description, "Status": status, "Priority": priority}
+    tasks.append(new_task)
+
+def delete_task(index):
+    if 0 <= index < len(tasks):
+        return tasks.pop(index)
+    else:
+        print("Invalid index")
+        return None
+        
+def toggle_status(index):
+    if 0 <= index < len(tasks):
+        if tasks[index]["Status"] == "Pending":
+            tasks[index]["Status"] = "Done"
+        else:
+            tasks[index]["Status"] = "Pending"
+        return tasks[index]
+    else:
+        print("Task Doesn't Exist")
+        return None
+
+def get_task_priority():
+    return sorted(tasks, key=lambda task: task["Priority"])
+    
+
+def main():
+    pass
+
+add_task("Do homework", "Pending", 2)
+print(tasks)
+print(delete_task(0))
+print(tasks)
+print(toggle_status(7))
+print(get_task_priority())
