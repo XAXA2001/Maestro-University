@@ -1,0 +1,11 @@
+board = [
+    ["-", "-", "-"],
+    ["-", "-", "-"],
+    ["-", "-", "-"]
+]
+
+board[1][1] = "X"
+board[0][2] = "O"
+print(board)
+print(board[0])
+print(board[0][1])
