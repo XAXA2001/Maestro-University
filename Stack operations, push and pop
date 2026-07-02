@@ -1,0 +1,10 @@
+pancakes = []
+
+pancakes.append("blueberry")
+pancakes.append("chocolate")
+pancakes.append("banana")
+
+served = pancakes.pop()
+
+print("Pancakes served:", served)
+print("Waiting to be served:", pancakes)
