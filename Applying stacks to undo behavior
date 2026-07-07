@@ -1,0 +1,23 @@
+history = ["reload", "strike", "heal", "run"]
+
+undo1 = history.pop()
+undo2 = history.pop()
+
+print("First undo:", undo1)
+print("Second undo:", undo2)
+print("History now:", history)
+
+
+
+history = ["reload", "strike"]
+
+history.append("block")
+history.append("heal")
+history.append("run")
+
+undo1 = history.pop()
+undo2 = history.pop()
+
+print("First undo:", undo1)
+print("Second undo:", undo2)
+print("History now:", history)
