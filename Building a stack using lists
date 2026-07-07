@@ -1,0 +1,32 @@
+stack = []
+
+stack.append("Mushroom")
+stack.append("Sword")
+stack.append("Microphone")
+stack.pop()
+stack.pop()
+
+if not stack:
+    print("Stack is empty")
+else:
+    print("Stack is NOT empty")
+
+print(stack)
+
+
+
+stack = []
+
+stack.append("Vegetables")
+stack.append("Fruit")
+stack.append("Seeds")
+stack.pop()
+stack.pop()
+stack.pop()
+
+if not stack:
+    print("Stack is empty")
+else:
+    print("Stack is NOT empty")
+
+print(stack)
