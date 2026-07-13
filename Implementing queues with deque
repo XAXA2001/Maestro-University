@@ -1,0 +1,11 @@
+from collections import deque
+
+players = deque()
+
+players.append("Alice")
+players.append("Bob")
+players.append("Charlie")
+
+first = players.popleft()
+print(first)
+print(players)
