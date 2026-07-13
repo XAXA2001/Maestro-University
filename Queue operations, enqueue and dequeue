@@ -1,0 +1,21 @@
+queue = []
+
+queue.append("Alice")
+queue.append("Bob")
+queue.append("Charlie")
+
+print(queue)
+
+
+
+queue = []
+
+queue.append("Alice")
+queue.append("Bob")
+queue.append("Charlie")
+
+first = queue.pop(0)
+print("Dequeued:", first)
+print("Queue now:", queue)
+
+print(queue)
