@@ -1,0 +1,14 @@
+from collections import deque
+
+queue = deque(["Alice", "Bob", "Cara"])
+backpacks = {
+    "Alice": ["potion", "map"],
+    "Bob": ["rope"],
+    "Cara": ["torch", "key"]
+}
+
+person = queue.popleft()
+item = backpacks[person].pop()
+print(person, "used", item)
+queue.append(person)
+print(queue)
