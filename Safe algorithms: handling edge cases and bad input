@@ -1,0 +1,17 @@
+def safe_max(numbers):
+    if numbers == None:
+        print("Please pass a list of numbers")
+        return
+    elif not isinstance(numbers, list):
+        print("Please pass a list of numbers")
+        return
+    elif numbers == []:
+        print("No numbers given")
+        return
+    else:
+        return max(numbers)
+
+print(safe_max(None))
+print(safe_max("hello"))
+print(safe_max([]))
+print(safe_max([3, 10, 7]))
