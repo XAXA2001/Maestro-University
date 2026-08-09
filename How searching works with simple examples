@@ -1,0 +1,11 @@
+nums = [10, 20, 30, 40]
+target = 25
+found = False
+
+for n in nums:
+    if n == target:
+        found = True
+        print("Target found!")
+
+if not found:
+    print("Not found")
