@@ -1,0 +1,8 @@
+players = [
+    {"name": "Alex", "score": 220, "time": 55},
+    {"name": "Blair", "score": 220, "time": 47},
+    {"name": "Casey", "score": 200, "time": 50},
+]
+
+sorted_players = sorted(players, key=lambda p: (-p["score"], p["time"]))
+print(sorted_players)
