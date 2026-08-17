@@ -1,0 +1,19 @@
+scores = [10, 3, 25, 7, 14]
+
+sorted_scores = sorted(scores)
+sorted_scores_desc = sorted(scores, reverse=True)
+
+print(sorted_scores)
+print(sorted_scores_desc)
+
+
+
+
+players = [
+    ("Alice", 50),
+    ("Bob", 80),
+    ("Cara", 65)
+]
+
+sorted_players = sorted(players, key=lambda player: player[1])
+print(sorted_players)
